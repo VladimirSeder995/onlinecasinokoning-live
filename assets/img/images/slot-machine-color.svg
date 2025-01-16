@@ -1,0 +1,7 @@
+<svg id="slot-machine" xmlns="http://www.w3.org/2000/svg" width="50.844" height="41.708" viewBox="0 0 50.844 41.708">
+  <path id="Path_122" data-name="Path 122" d="M181,90v23.833h14.9V90Zm11.917,11.044-.436.436a8.742,8.742,0,0,0-2.543,6.139v1.746h-2.979v-1.746a11.754,11.754,0,0,1,2.979-7.784v-.9h-2.979v1.49h-2.979V95.958h8.937Zm0,0" transform="translate(-163.026 -81.063)" fill="#ff9e37"/>
+  <path id="Path_123" data-name="Path 123" d="M0,0H50.844V5.958H0ZM0,0" fill="#0b5d98"/>
+  <path id="Path_124" data-name="Path 124" d="M0,360H50.844v5.958H0Zm0,0" transform="translate(0 -324.25)" fill="#0b5d98"/>
+  <path id="Path_125" data-name="Path 125" d="M14.995,90H0v23.833H14.995Zm-2.979,11.044-.436.436a8.742,8.742,0,0,0-2.543,6.139v1.746H6.058v-1.746a11.754,11.754,0,0,1,2.979-7.784v-.9H6.058v1.49H3.078V95.958h8.937Zm0,0" transform="translate(0 -81.063)" fill="#ff9e37"/>
+  <path id="Path_126" data-name="Path 126" d="M361,113.833h14.995V90H361Zm2.979-17.875h8.937v5.085l-.436.436a8.742,8.742,0,0,0-2.543,6.139v1.746h-2.979v-1.746a11.754,11.754,0,0,1,2.979-7.784v-.9h-2.979v1.49h-2.979Zm0,0" transform="translate(-325.151 -81.063)" fill="#ff9e37"/>
+</svg>

@@ -1,0 +1,26 @@
+.icon-arrow-down {
+    display: inline-block;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    width: 10px; height: 10px;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+}
+
+.icon-arrow-up {
+    display: inline-block;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    width: 10px; height: 10px;
+    transform: rotate(-135deg);
+    transform-origin: 50% 80%;
+}
+.icon-arrow-up {
+    display: none;
+}
+details[open] .icon-arrow-up {
+    display: inline-block;
+}
+details[open] .icon-arrow-down {
+    display: none;
+}

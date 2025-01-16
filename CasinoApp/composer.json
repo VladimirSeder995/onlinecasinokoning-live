@@ -1,0 +1,21 @@
+{
+	"name": "onlinecasinokoning/onlinecasinokoning",
+	"description": "Custom build theme for onlinecasinokoning",
+	"type": "metapackage",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Onlinecasinokoning",
+			"email": "info@onlinecasinokoning.com"
+		}
+	],
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"CasinoApp\\": "src/classes"
+		},
+		"files": [
+			"index.php"
+		]
+	}
+}
