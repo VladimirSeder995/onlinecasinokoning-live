@@ -16,7 +16,7 @@ $meta_style = get_theme_mod('zakra_blog_archive_meta_style', 'tg-meta-style-one'
         <div class="news__single__article__image">
             <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="false">
                 <?php if( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail('full'); ?>
+                    <?php the_post_thumbnail('full', array('class' => 'post-thumbnail-img')); ?>
                 <?php else : ?>
                     <img src='<?php echo get_stylesheet_directory_uri() . '/assets/img/images/default-image.png' ?>' alt='default-post-image' />
                 <?php endif; ?>
