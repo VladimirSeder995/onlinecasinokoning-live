@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=	/home/onlinec3/public_html/wp-content/themes/zakra-theme
+    - export DEPLOYPATH=	/home/onlinec3/public_html/wp-content/themes/zakra
     - /bin/cp -r * $DEPLOYPATH
