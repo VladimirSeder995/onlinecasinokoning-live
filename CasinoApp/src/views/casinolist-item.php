@@ -10,7 +10,7 @@ $casino = $args['casino'];
         <div class="casino-list-item-cell">
             <div class="casino-list-img">
                 <a href="<?php echo $casino->getAffiliateLink(); ?>">
-                    <?php echo wp_get_attachment_image( $casino->getCoverId(), 'fcrp-casino-logo' ); ?>
+                    <?php echo wp_get_attachment_image( $casino->getCoverId(), 'fcrp-casino-logo', false, array('class' => 'casino-list-img-img') ); ?>
                 </a>
             </div>
             <div class="mobile-rating">
