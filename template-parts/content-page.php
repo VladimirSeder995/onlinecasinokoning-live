@@ -100,6 +100,14 @@ $content_orders = get_theme_mod(
 		$relatedPosts = get_posts($relatedPostsArgs);
 
 		if( $relatedPosts ): ?>
+
+			<?php 
+			
+			$gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+
+			?>
 		
 			<h2><?php _e('Meer zoals','ock'); ?> <?php the_title(); ?></h2>
 			<div class="card-wrapper withflexwrap">
@@ -113,13 +121,13 @@ $content_orders = get_theme_mod(
 
 					?>
 					<div class="gamecard-container">
-						<div class="gamecard-image">
+						<div class="gamecard-image 1 eager">
 							<a href="<?php the_permalink($cardId) ?>">
 
 								<?php if( $cardThumbUrl ): ?>
-									<img class="z-depth-1" alt="<?php echo $cardTitle; ?>" src="<?php echo $cardThumbUrl ?>" loading="lazy" />
+									<img class="z-depth-1 <?php echo $lazyload_class ?>" alt="<?php echo $cardTitle; ?>" src="<?php echo $cardThumbUrl ?>" />
 								<?php else: ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/images/default-image.png" alt="default" />
+									<img class="z-depth-1 <?php echo $lazyload_class ?>" src="<?php echo get_template_directory_uri(); ?>/assets/img/images/default-image.png" alt="default" />
 								<?php endif; ?>
 							</a>
 						</div>

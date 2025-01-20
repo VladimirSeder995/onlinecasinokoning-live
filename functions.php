@@ -687,6 +687,14 @@ function gokkasten_relationship_shortcode( $atts ){
 		$posts = get_field('gokkasten_page_populair','option');
 		if( $posts ): ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -699,7 +707,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -725,6 +733,14 @@ function gokkasten_relationship_shortcode( $atts ){
 
 		<?php if ( $posts ) : ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -737,7 +753,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -755,6 +771,14 @@ function gokkasten_relationship_shortcode( $atts ){
 		$posts = get_field('gokkasten_page_video_slots','option');
 		if( $posts ): ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -767,7 +791,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -785,6 +809,14 @@ function gokkasten_relationship_shortcode( $atts ){
 		$posts = get_field('gokkasten_page_klassiekers','option');
 		if( $posts ): ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -797,7 +829,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -815,6 +847,14 @@ function gokkasten_relationship_shortcode( $atts ){
 		$posts = get_field('gokkasten_page_jackpots','option');
 		if( $posts ): ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -827,7 +867,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -855,6 +895,14 @@ function gokkasten_relationship_shortcode( $atts ){
 
 		<?php if ( $posts ) : ?>
 
+            <?php 
+            
+            $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+			$gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+			$lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+            
+            ?>
+
 			<div class="section lazy-load-section gokkasten-relationship-section">
 				<div class="container">
 					<div class="row">
@@ -862,7 +910,7 @@ function gokkasten_relationship_shortcode( $atts ){
 							<div class="row">
 								<div class="col s12 card-wrapper">
 									<?php foreach( $posts as $post): ?>
-										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+										<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 									<?php endforeach; ?>
 								</div>
 							</div>
@@ -891,6 +939,14 @@ function gokkasten_relationship_shortcode( $atts ){
 
 			<?php if ( $posts ) : ?>
 
+                <?php 
+            
+                $gokkasten_disable_lazyload = get_field('gokkasten_disable_lazyload','option');
+                $gokkasten_disable_lazyload = ( $gokkasten_disable_lazyload )? $gokkasten_disable_lazyload:array();
+                $lazyload_class = ( !in_array(get_the_ID(), $gokkasten_disable_lazyload) )? '': 'no-lazy';
+                
+                ?>
+
 				<div class="section lazy-load-section gokkasten-relationship-section">
 					<div class="container">
 						<div class="row">
@@ -898,7 +954,7 @@ function gokkasten_relationship_shortcode( $atts ){
 								<div class="row">
 									<div class="col s12 card-wrapper">
 										<?php foreach( $posts as $post): ?>
-											<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post)) ?>
+											<?php get_template_part('template-parts/gokkast-card-template', '', array('post_data' => $post, 'lazyload_class' => $lazyload_class)) ?>
 										<?php endforeach; ?>
 									</div>
 								</div>

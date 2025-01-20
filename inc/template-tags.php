@@ -154,7 +154,7 @@ if ( ! function_exists( 'zakra_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('full', array('class' => 'post-thumbnail-img')); ?>
+				<?php the_post_thumbnail('full', array('class' => 'post-thumbnail-img no-lazy')); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

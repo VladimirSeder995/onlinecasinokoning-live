@@ -7,15 +7,17 @@ if( isset($args['post_data']) && $args['post_data'] ):
     $cardTitle = $args['post_data']->post_title;
     $cardThumbUrl = get_the_post_thumbnail_url($cardId, 'medium_large');
 
+    $lazyload_class = ( isset($args['lazyload_class']) && $args['lazyload_class'] )? $args['lazyload_class']:'';
+
     ?>
     <div class="gamecard-container">
-        <div class="gamecard-image">
+        <div class="gamecard-image 2 lazy">
             <a href="<?php the_permalink($cardId) ?>">
 
                 <?php if( $cardThumbUrl ): ?>
-                    <img class="z-depth-1" alt="<?php echo $cardTitle; ?>" src="<?php echo $cardThumbUrl ?>" loading="lazy" />
+                    <img class="z-depth-1 <?php echo $lazyload_class ?>" alt="<?php echo $cardTitle; ?>" src="<?php echo $cardThumbUrl ?>" loading="lazy" />
                 <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/images/default-image.png" alt="default" />
+                    <img class="z-depth-1 <?php echo $lazyload_class ?>" src="<?php echo get_template_directory_uri(); ?>/assets/img/images/default-image.png" alt="default" />
                 <?php endif; ?>
             </a>
         </div>

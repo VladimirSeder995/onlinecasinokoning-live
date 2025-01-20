@@ -38,6 +38,8 @@ do_action( 'zakra_action_doctype' );
 
 		<?php wp_head(); ?>
 
+		<link rel="preload" as="image" href="<?php echo get_template_directory_uri(); ?>/assets/img/images/hero-image.svg" />
+
 	</head>
 
 <body <?php body_class(); ?>>
