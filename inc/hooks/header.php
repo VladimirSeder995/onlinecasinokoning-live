@@ -226,7 +226,7 @@ if ( ! function_exists( 'zakra_before_header_main' ) ) :
 	 */
 	function zakra_before_header_main() {
 		?>
-		<div class="tg-site-header-bottom">
+		<div class="tg-site-header-bottom no-lazy">
 			<div class="<?php zakra_css_class( 'zakra_header_main_container_class' ); ?>">
 		<?php
 	}
