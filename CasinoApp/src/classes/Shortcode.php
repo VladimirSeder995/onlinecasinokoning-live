@@ -102,6 +102,10 @@ class Shortcode extends Base {
         ]);
     }
     public function shortcode_popularcasinos_function( $args, $content ) {
+
+        // disabled casinos
+        return false;
+
         $postsPerPage = isset( $args['per_page'] ) ? intval($args['per_page']) : 4;
 
         $casinoQuery = new WP_Query([
@@ -121,6 +125,9 @@ class Shortcode extends Base {
     }
 
     public function shortcode_casinolist_function( $args, $content ) {
+
+        // disabled casinos
+        return false;
 
         $postsPerPage = isset( $args['per_page'] ) ? intval($args['per_page']) : 10;
         $orderBy = isset( $args['order_by'] ) ? $args['order_by'] : 'menu_order';
