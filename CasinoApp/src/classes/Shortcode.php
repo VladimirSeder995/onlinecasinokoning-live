@@ -54,14 +54,17 @@ class Shortcode extends Base {
             $buttonClass = $key == $fieldsCount ? 'casino-list-btn' : '';
             
             if( $key == $fieldsCount ) {
-                if( $valueArray['relation'] ) {
-                    $casino = new Casino( $valueArray['relation'] );
-                    $field['label'] = '';
-                    $value = "<a target='_blank' class='$buttonClass' href='". $casino->getAffiliateLink() ."'>Speel ". get_the_title() ."</a>";
-                } else {
-                    $field['label'] = '';
-                    $value = "N/A";
-                }
+
+                // disabled casinos
+
+                // if( $valueArray['relation'] ) {
+                //     $casino = new Casino( $valueArray['relation'] );
+                //     $field['label'] = '';
+                //     $value = "<a target='_blank' class='$buttonClass' href='". $casino->getAffiliateLink() ."'>Speel ". get_the_title() ."</a>";
+                // } else {
+                //     $field['label'] = '';
+                //     $value = "N/A";
+                // }
             } else {
                 if( $valueArray['field_type'] == 1 ) {
                     $value = $valueArray['text'];
