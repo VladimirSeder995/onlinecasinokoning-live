@@ -1073,11 +1073,15 @@ function gokkast_shortcode( $atts ){
 			</div>
 			<div class="bonusmaand-buttons">
 			<div class="casinocard-btn">
-				<a class="tg-read-more" href="<?php the_permalink($postId) ?>">Bekijk review</a>
+				<a class="tg-read-more" href="<?php the_permalink($postId) ?>"><span>Bekijk review</span></a>
 			</div>
-			<div class="casinocard-btn">
-				<a class="btn-cc waves-effect waves-light casino-list-btn" href="<?php echo $casino_affiliate_link ?>" target="_blank" rel="nofollow">Speel nu</a>
-			</div>
+
+            <?php if( false ): ?>
+                <div class="casinocard-btn">
+                    <a class="btn-cc waves-effect waves-light casino-list-btn" href="<?php echo $casino_affiliate_link ?>" target="_blank" rel="nofollow">Speel nu</a>
+                </div>
+            <?php endif; ?>
+
 			</div>
 		</div>
 		</div>
