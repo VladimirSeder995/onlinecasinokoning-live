@@ -121,7 +121,7 @@ $content_orders = get_theme_mod(
 
 					?>
 					<div class="gamecard-container">
-						<div class="gamecard-image 1 eager">
+						<div class="gamecard-image">
 							<a href="<?php the_permalink($cardId) ?>">
 
 								<?php if( $cardThumbUrl ): ?>

@@ -11,7 +11,7 @@ if( isset($args['post_data']) && $args['post_data'] ):
 
     ?>
     <div class="gamecard-container">
-        <div class="gamecard-image 2 lazy">
+        <div class="gamecard-image">
             <a href="<?php the_permalink($cardId) ?>">
 
                 <?php if( $cardThumbUrl ): ?>

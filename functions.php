@@ -145,17 +145,15 @@ function zakra_scripts() {
 	/**
 	 * Styles.
 	 */
-	// Font Awesome 4.
-	wp_register_style( 'font-awesome', get_template_directory_uri() . '/assets/lib/font-awesome/css/font-awesome' . $suffix . '.css', false, '4.7.0' );
-	wp_enqueue_style( 'font-awesome' );
-
 	// Theme style.
 	wp_register_style( 'zakra-style', get_stylesheet_uri(), [], time() );
 	wp_enqueue_style( 'zakra-style' );
 
 	// Theme style.
-	wp_register_style( 'zakra-style-backend', get_stylesheet_directory_uri() . '/style-backend.css', [], time() );
-	wp_enqueue_style( 'zakra-style-backend' );
+    if( is_user_logged_in() ):
+        wp_register_style( 'zakra-style-backend', get_stylesheet_directory_uri() . '/style-backend.css', [], time() );
+        wp_enqueue_style( 'zakra-style-backend' );
+    endif;
 
 	// Support RTL.
 	wp_style_add_data( 'zakra-style', 'rtl', 'replace' );
@@ -182,6 +180,10 @@ function zakra_scripts() {
 		return;
 	}
 
+    // Font Awesome 4.
+	wp_register_style( 'font-awesome', get_template_directory_uri() . '/assets/lib/font-awesome/css/font-awesome' . $suffix . '.css', false, '4.7.0' );
+	wp_enqueue_style( 'font-awesome' );
+
 	/**
 	 * Scripts.
 	 */
@@ -190,7 +192,7 @@ function zakra_scripts() {
 
 	// Theme JavaScript.
 	wp_enqueue_script( 'zakra-custom', get_template_directory_uri() . '/assets/js/zakra-custom' . $suffix . '.js', array(), false, true );
-	wp_enqueue_script( 'zakra-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), false, true );
+	wp_enqueue_script( 'zakra-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -2423,3 +2425,26 @@ function ul_shortcode( $atts ) {
     return $output;
 }
 add_shortcode( 'ul', 'ul_shortcode' );
+
+function zekra_dequeue_scripts() {
+
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+
+    $the_content = get_the_content();
+
+    // remove fcrp if no shortcode
+    if (strpos($the_content, 'fcrp') === false) {
+        wp_dequeue_script('fcrp-gameslist');
+
+		wp_dequeue_style('fcrp-dark-css');
+		wp_dequeue_style('fcrp-light-css');
+    }
+
+    // remove easyaccordion if no shortcode
+    if (strpos($the_content, 'easyaccordion') === false) {
+        wp_dequeue_style( 'sp-ea-style' );
+    }
+}
+add_action('wp_enqueue_scripts', 'zekra_dequeue_scripts', 100);
